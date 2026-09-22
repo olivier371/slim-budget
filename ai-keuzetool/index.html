@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI-keuzetool: welk AI-pad past bij jou? | slim-budget.nl</title>
+<meta name="description" content="Twee vragen en je ziet welk soort AI-werk bij je past — met voorbeelden van omscholing via de SLIM-scholingssubsidie. Gratis keuzetool van slim-budget.nl.">
+<link rel="canonical" href="https://slim-budget.nl/ai-keuzetool/">
+<meta property="og:title" content="AI-keuzetool: welk AI-pad past bij jou?"><meta property="og:description" content="Twee vragen en je ziet welk soort AI-werk bij je past — met voorbeelden van omscholing via de SLIM-scholingssubsidie."><meta property="og:url" content="https://slim-budget.nl/ai-keuzetool/"><meta property="og:type" content="website"><meta property="og:locale" content="nl_NL">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b7a75'/%3E%3Ctext x='16' y='22' font-size='17' font-weight='800' text-anchor='middle' fill='white' font-family='sans-serif'%3ES%3C/text%3E%3C/svg%3E">
+<style>
+:root{--ink:#14213d;--muted:#5b6478;--bg:#ffffff;--soft:#f3f6fb;--line:#dfe5ef;--acc:#0b7a75;--acc2:#e8f5f4;--warn:#fff4e5;--maxw:960px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:17px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--acc)}h1,h2,h3{line-height:1.2;margin:1.6em 0 .5em}h1{font-size:2.1rem;margin-top:.4em}h2{font-size:1.45rem}h3{font-size:1.15rem}
+header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:5}
+.nav{max-width:var(--maxw);margin:0 auto;padding:12px 20px;display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center}
+.logo{font-weight:800;text-decoration:none;color:var(--ink);font-size:1.15rem;margin-right:auto}.logo span{color:var(--acc)}
+.nav a:not(.logo){text-decoration:none;color:var(--muted);font-size:.95rem}.nav a:hover{color:var(--acc)}
+main{max-width:var(--maxw);margin:0 auto;padding:12px 20px 60px}
+.lead{font-size:1.2rem;color:var(--muted)}
+.box{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:24px 0}
+.box.acc{background:var(--acc2);border-color:#b8dedb}.box.warn{background:var(--warn);border-color:#f3d9a8}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin:24px 0}
+.card{border:1px solid var(--line);border-radius:12px;padding:18px 20px;background:#fff}.card h3{margin-top:0}.card a{text-decoration:none;font-weight:600}
+.btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:10px;margin-top:8px;border:none;cursor:pointer;font-size:1rem}.btn:hover{background:#08605c}
+.btn.ghost{background:#fff;color:var(--acc);border:2px solid var(--acc)}
+.cta{background:var(--ink);color:#fff;border-radius:14px;padding:28px 26px;margin:44px 0 0}.cta h2{margin-top:0;color:#fff}.cta p{color:#cfd6e4}.cta .btn{background:#fff;color:var(--ink)}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.foot{max-width:var(--maxw);margin:0 auto;padding:24px 20px;display:flex;flex-wrap:wrap;gap:8px 24px}
+.crumbs{font-size:.88rem;color:var(--muted);margin-top:10px}.crumbs a{color:var(--muted)}
+.upd{font-size:.85rem;color:var(--muted)}
+ul,ol{padding-left:1.3em}li{margin:.35em 0}
+@media(max-width:600px){h1{font-size:1.65rem}body{font-size:16px}}
+/* quiz-specifiek */
+.quiz-step{margin:22px 0}
+.quiz-step .qn{font-weight:700;margin-bottom:10px}
+.opts{display:grid;gap:10px}
+.opt{display:block;width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:14px 16px;cursor:pointer;font:inherit;color:var(--ink)}
+.opt:hover{border-color:var(--acc)}
+.opt.sel{border-color:var(--acc);background:var(--acc2);font-weight:600}
+.progress{font-size:.85rem;color:var(--muted);margin-bottom:6px}
+#q2wrap,#result{display:none}
+.persona{border:2px solid var(--acc);border-radius:14px;padding:22px 24px;background:var(--acc2);margin:18px 0}
+.persona h3{margin-top:0;font-size:1.25rem}
+.persona .tag{display:inline-block;background:var(--acc);color:#fff;font-size:.78rem;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.restart{background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;padding:0}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "SLIM Budget", "url": "https://slim-budget.nl", "description": "Onafhankelijke uitleg over de SLIM-subsidie: scholingssubsidie voor werknemers en SLIM-mkb voor werkgevers."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://slim-budget.nl/"}, {"@type": "ListItem", "position": 2, "name": "AI-keuzetool", "item": "https://slim-budget.nl/ai-keuzetool/"}]}</script>
+</head>
+<body>
+<header><nav class="nav" aria-label="Hoofdmenu"><a class="logo" href="/">SLIM<span>·</span>Budget</a><a href="/slim-subsidie/">Wat is SLIM?</a><a href="/ai-keuzetool/">AI-keuzetool</a><a href="/budget-check/">Budget-check</a><a href="/aanvragen/">Stappenplan</a><a href="/deadlines/">Deadlines</a><a href="/faq/">FAQ</a></nav></header>
+<main><nav class="crumbs" aria-label="Kruimelpad"><a href="/">Home</a> › AI-keuzetool</nav>
+
+<h1>Welk AI-pad past bij jou?</h1>
+<p class="lead">De SLIM-scholingssubsidie is er ook voor wie wil overstappen naar werk dat je nu nog niet kent — zoals iets met AI of data. Twee korte vragen, en je ziet een voorbeeld van hoe zo'n overstap eruit kan zien.</p>
+
+<div class="box" id="quiz">
+
+<div class="quiz-step" id="q1wrap">
+<p class="progress">Vraag 1 van 2</p>
+<p class="qn">Wat spreekt je het meest aan?</p>
+<div class="opts">
+<button class="opt" data-q="1" data-v="a">Patronen ontdekken en dingen slimmer/beter maken met informatie</button>
+<button class="opt" data-q="1" data-v="b">Zelf iets bouwen of ontwerpen dat mensen gebruiken</button>
+<button class="opt" data-q="1" data-v="c">Weet ik nog niet — ik wil vooral zien wat er mogelijk is</button>
+</div>
+</div>
+
+<div class="quiz-step" id="q2wrap">
+<p class="progress">Vraag 2 van 2</p>
+<p class="qn">Welke achtergrond ligt het dichtst bij jou?</p>
+<div class="opts">
+<button class="opt" data-q="2" data-v="a">Zorg, onderwijs of een ander mensgericht vak</button>
+<button class="opt" data-q="2" data-v="b">Vormgeving, creatief werk of marketing</button>
+<button class="opt" data-q="2" data-v="c">Iets heel anders / geen van beide</button>
+</div>
+</div>
+
+</div>
+
+<div id="result">
+
+<div id="personaA" class="persona">
+<span class="tag">Voorbeeld</span>
+<h3>Van verpleegkundige naar kwaliteitsmanager met AI</h3>
+<p>Een verpleegkundige met 8 jaar ervaring op de zaal wilde iets anders, maar niet weg uit de zorg. Via een scholingstraject leerde ze patiëntdata analyseren en kwaliteitsdashboards bouwen. Ze werkt nu als kwaliteitsmanager in een ziekenhuis — met precies de klinische kennis die een "pure" data-analist mist.</p>
+<p><strong>Wat dit vraagt:</strong> basis data-analyse en AI-tools leren toepassen op een vakgebied dat je al kent. Vaak goedkoper en sneller dan een volledig nieuw vak leren.</p>
+</div>
+
+<div id="personaB" class="persona">
+<span class="tag">Voorbeeld</span>
+<h3>Van grafisch vormgever naar AI-appbouwer</h3>
+<p>Een freelance grafisch vormgever zag opdrachten opdrogen. Met AI-codetools leerde hij zelf apps bouwen — en zijn oog voor gebruiksvriendelijk ontwerp bleek een voordeel dat veel developers missen. Hij combineert nu vormgeving en bouwen in één rol.</p>
+<p><strong>Wat dit vraagt:</strong> leren werken met AI-tools die het programmeren voor je vereenvoudigen, gecombineerd met vaardigheden die je al hebt.</p>
+</div>
+
+<p class="upd">Dit zijn illustratieve voorbeeldscenario's om te laten zien wat een overstap kan opleveren — geen echte cursisten of testimonials.</p>
+
+<div class="box acc">
+<strong>Zo pak je dit financieel aan</strong>
+<p>Dit soort omscholing valt vaak onder de <a href="/slim-subsidie/#werknemers">SLIM-scholingssubsidie</a>: tot €25.000 per aanvraag voor een praktijkgerichte opleiding, met een eigen bijdrage van de werkgever. Bespreek met je werkgever (of, als zelfstandige, met een opdrachtgever) of dit past bij jullie plannen.</p>
+</div>
+
+<p><button class="restart" id="restart">↺ Opnieuw beginnen</button></p>
+</div>
+
+<section class="cta"><h2>Klaar om echt te starten met AI en data?</h2>
+<p>Amsterdam Data Academy geeft NLQF-6 gecertificeerde opleidingen in data en AI — precies het soort traject dat je met de SLIM-scholingssubsidie kunt combineren.</p>
+<a class="btn" href="https://www.amsterdamdataacademy.com/?utm_source=slim-budget.nl&amp;utm_medium=referral&amp;utm_campaign=ai-keuzetool" rel="sponsored">Bekijk de opleidingen →</a></section>
+</main>
+<footer><div class="foot"><span>© 2026 slim-budget.nl</span><a href="/over/">Over deze site</a><a href="/faq/">FAQ</a><a href="https://www.uitvoeringvanbeleidszw.nl/subsidies-en-regelingen/algemene-informatie/slim-mkb-individuele-aanvragen--samenwerkingsverbanden-2025---2029" rel="noopener">Officiële bron (UVB)</a><span class="upd">Laatst bijgewerkt: 2026-09-22</span></div></footer>
+
+<script>
+(function(){
+var answers={};
+var q1wrap=document.getElementById('q1wrap'),q2wrap=document.getElementById('q2wrap'),quiz=document.getElementById('quiz'),result=document.getElementById('result');
+var personaA=document.getElementById('personaA'),personaB=document.getElementById('personaB');
+
+document.querySelectorAll('.opt').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var q=btn.getAttribute('data-q'),v=btn.getAttribute('data-v');
+    answers[q]=v;
+    document.querySelectorAll('.opt[data-q="'+q+'"]').forEach(function(b){b.classList.remove('sel')});
+    btn.classList.add('sel');
+    if(q==='1'){
+      q2wrap.style.display='block';
+      q2wrap.scrollIntoView({behavior:'smooth',block:'nearest'});
+    }
+    if(answers['1']&&answers['2']){
+      showResult();
+    }
+  });
+});
+
+function showResult(){
+  var scoreA=0,scoreB=0;
+  if(answers['1']==='a')scoreA++;if(answers['1']==='b')scoreB++;
+  if(answers['2']==='a')scoreA++;if(answers['2']==='b')scoreB++;
+  quiz.style.display='none';
+  result.style.display='block';
+  if(scoreA>scoreB){personaA.style.display='block';personaB.style.display='none'}
+  else if(scoreB>scoreA){personaB.style.display='block';personaA.style.display='none'}
+  else{personaA.style.display='block';personaB.style.display='block'}
+  result.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+document.getElementById('restart').addEventListener('click',function(){
+  answers={};
+  document.querySelectorAll('.opt').forEach(function(b){b.classList.remove('sel')});
+  q2wrap.style.display='none';
+  result.style.display='none';
+  quiz.style.display='block';
+  quiz.scrollIntoView({behavior:'smooth',block:'start'});
+});
+})();
+</script>
+</body></html>
