@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SLIM budget-check: bereken je subsidie (60%, tot €24.999)</title>
-<meta name="description" content="Bereken direct hoeveel SLIM-subsidie je project oplevert. 60% van de kosten, minimaal €5.000 en maximaal €24.999 voor individuele mkb-aanvragen.">
+<title>SLIM budget-check: bereken je subsidie (werknemer of werkgever)</title>
+<meta name="description" content="Bereken direct hoeveel SLIM-subsidie je krijgt. Werknemer? 40-90% van je opleiding vergoed. Werkgever? 60% van je opleidingsplan, tot €24.999.">
 <link rel="canonical" href="https://slim-budget.nl/budget-check/">
-<meta property="og:title" content="SLIM budget-check: bereken je subsidie (60%, tot €24.999)"><meta property="og:description" content="Bereken direct hoeveel SLIM-subsidie je project oplevert. 60% van de kosten, minimaal €5.000 en maximaal €24.999 voor individuele mkb-aanvragen."><meta property="og:url" content="https://slim-budget.nl/budget-check/"><meta property="og:type" content="website"><meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="SLIM budget-check: bereken je subsidie (werknemer of werkgever)"><meta property="og:description" content="Bereken direct hoeveel SLIM-subsidie je krijgt. Werknemer? 40-90% van je opleiding vergoed. Werkgever? 60% van je opleidingsplan, tot €24.999."><meta property="og:url" content="https://slim-budget.nl/budget-check/"><meta property="og:type" content="website"><meta property="og:locale" content="nl_NL">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b7a75'/%3E%3Ctext x='16' y='22' font-size='17' font-weight='800' text-anchor='middle' fill='white' font-family='sans-serif'%3ES%3C/text%3E%3C/svg%3E">
 <style>
@@ -26,7 +26,7 @@ main{max-width:var(--maxw);margin:0 auto;padding:12px 20px 60px}
 .card{border:1px solid var(--line);border-radius:12px;padding:18px 20px;background:#fff}.card h3{margin-top:0}.card a{text-decoration:none;font-weight:600}
 table{border-collapse:collapse;width:100%;margin:16px 0;font-size:.97rem}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--soft)}
 .tbl{overflow-x:auto}
-.btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:10px;margin-top:8px}.btn:hover{background:#08605c}
+.btn{display:inline-block;background:var(--acc);color:#fff;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:10px;margin-top:8px;border:none;cursor:pointer;font-size:1rem}.btn:hover{background:#08605c}
 .btn.ghost{background:#fff;color:var(--acc);border:2px solid var(--acc)}
 .cta{background:var(--ink);color:#fff;border-radius:14px;padding:28px 26px;margin:44px 0 0}.cta h2{margin-top:0;color:#fff}.cta p{color:#cfd6e4}.cta .btn{background:#fff;color:var(--ink)}
 footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}.foot{max-width:var(--maxw);margin:0 auto;padding:24px 20px;display:flex;flex-wrap:wrap;gap:8px 24px}
@@ -37,34 +37,90 @@ label{display:block;font-weight:600;margin-top:14px}input,select{font:inherit;pa
 .res{font-size:1.35rem;font-weight:800;color:var(--acc)}
 ul,ol{padding-left:1.3em}li{margin:.35em 0}
 @media(max-width:600px){h1{font-size:1.65rem}body{font-size:16px}}
+.opts{display:grid;gap:10px;margin-top:10px}
+.opt{display:block;width:100%;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:14px 16px;cursor:pointer;font:inherit;color:var(--ink)}
+.opt:hover{border-color:var(--acc)}
+.opt.sel{border-color:var(--acc);background:var(--acc2);font-weight:600}
+.calc{display:none}
+.back{background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;padding:0;margin-top:14px}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "SLIM Budget", "url": "https://slim-budget.nl", "description": "Onafhankelijke uitleg over de SLIM-subsidie voor mkb-werkgevers: budget, deadlines, aanvragen."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://slim-budget.nl/"}, {"@type": "ListItem", "position": 2, "name": "Budget-check", "item": "https://slim-budget.nl/budget-check/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "SLIM budget-check", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "url": "https://slim-budget.nl/budget-check/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "SLIM Budget", "url": "https://slim-budget.nl", "description": "Onafhankelijke uitleg over de SLIM-subsidie: scholingssubsidie voor werknemers en SLIM-mkb voor werkgevers."}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://slim-budget.nl/"}, {"@type": "ListItem", "position": 2, "name": "Budget-check", "item": "https://slim-budget.nl/budget-check/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "SLIM budget-check", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "url": "https://slim-budget.nl/budget-check/", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}}</script>
 </head>
 <body>
 <header><nav class="nav" aria-label="Hoofdmenu"><a class="logo" href="/">SLIM<span>·</span>Budget</a><a href="/slim-subsidie/">Wat is SLIM?</a><a href="/ai-keuzetool/">AI-keuzetool</a><a href="/budget-check/">Budget-check</a><a href="/aanvragen/">Stappenplan</a><a href="/deadlines/">Deadlines</a><a href="/faq/">FAQ</a></nav></header>
 <main><nav class="crumbs" aria-label="Kruimelpad"><a href="/">Home</a> › Budget-check</nav>
 
 <h1>SLIM budget-check</h1>
-<p class="lead">Vul de verwachte projectkosten in en zie direct hoeveel subsidie je kunt aanvragen — en hoeveel je zelf bijdraagt.</p>
-<div class="box">
+<p class="lead">SLIM-mkb en de SLIM-scholingssubsidie werken helemaal anders. Beantwoord eerst deze vraag, dan krijg je de juiste rekensom.</p>
+
+<div class="box" id="branch">
+<p style="font-weight:700;margin-top:0">Voor wie is deze check?</p>
+<div class="opts">
+<button class="opt" id="pickWn">Ik ben werknemer (of zzp'er) en wil zelf een opleiding volgen</button>
+<button class="opt" id="pickWg">Ik ben werkgever en zoek budget voor het opleidingsplan van mijn bedrijf</button>
+</div>
+</div>
+
+<div class="box calc" id="wnBox">
+<p class="upd" style="margin-top:0">SLIM-scholingssubsidie — voor werknemers</p>
+<label for="niveau">Niveau van de opleiding<select id="niveau"><option value="hi">Mbo niveau 4, hbo of hoger (bijv. NLQF-6 — de meeste data- en AI-opleidingen)</option><option value="lo">Mbo niveau 1 t/m 3</option></select></label>
+<label for="kostenWn">Opleidingskosten (€)<input id="kostenWn" type="number" min="0" step="250" value="8000" inputmode="numeric"></label>
+<p style="margin-top:18px">Subsidie: <span class="res" id="subWn">—</span></p>
+<p id="msgWn" class="upd"></p>
+<p>Eigen bijdrage werkgever: <strong id="eigenWn">—</strong></p>
+<button class="back" data-back="1">↺ Andere situatie kiezen</button>
+</div>
+
+<div class="box calc" id="wgBox">
+<p class="upd" style="margin-top:0">SLIM-mkb — voor werkgevers</p>
 <label for="type">Type aanvraag<select id="type"><option value="ind">Individuele mkb-onderneming</option><option value="agri">Individueel — landbouwbedrijf</option><option value="sam">Samenwerkingsverband</option></select></label>
 <label for="kosten">Totale subsidiabele projectkosten (€)<input id="kosten" type="number" min="0" step="500" value="30000" inputmode="numeric"></label>
 <p style="margin-top:18px">Subsidie (60%): <span class="res" id="sub">—</span></p>
 <p id="msg" class="upd"></p>
 <p>Eigen bijdrage: <strong id="eigen">—</strong></p>
+<button class="back" data-back="1">↺ Andere situatie kiezen</button>
 </div>
+
 <script>
-(function(){var t=document.getElementById('type'),k=document.getElementById('kosten'),s=document.getElementById('sub'),e=document.getElementById('eigen'),m=document.getElementById('msg');
+(function(){
+var branch=document.getElementById('branch'),wnBox=document.getElementById('wnBox'),wgBox=document.getElementById('wgBox');
+
+document.getElementById('pickWn').addEventListener('click',function(){branch.style.display='none';wnBox.style.display='block';wgBox.style.display='none';calcWn()});
+document.getElementById('pickWg').addEventListener('click',function(){branch.style.display='none';wgBox.style.display='block';wnBox.style.display='none';calc()});
+document.querySelectorAll('.back').forEach(function(b){b.addEventListener('click',function(){branch.style.display='block';wnBox.style.display='none';wgBox.style.display='none'})});
+
 var f=function(n){return '€ '+Math.round(n).toLocaleString('nl-NL')};
+
+// SLIM-scholingssubsidie (werknemer)
+var niveau=document.getElementById('niveau'),kostenWn=document.getElementById('kostenWn'),subWn=document.getElementById('subWn'),eigenWn=document.getElementById('eigenWn'),msgWn=document.getElementById('msgWn');
+function calcWn(){
+  var c=parseFloat(kostenWn.value)||0,pct=niveau.value==='lo'?0.9:0.4,raw=c*pct,max=25000,sub=raw,msg='';
+  if(raw>max){sub=max;msg='Je zit boven het maximum: de subsidie is afgetopt op '+f(max)+' per aanvraag (max €100.000 per werkgever per jaar).'}
+  else if(c>0){msg='Percentage: '+Math.round(pct*100)+'% (afhankelijk van het opleidingsniveau).'}
+  subWn.textContent=f(sub);eigenWn.textContent=f(Math.max(c-sub,0));msgWn.textContent=msg;
+}
+niveau.addEventListener('change',calcWn);kostenWn.addEventListener('input',calcWn);
+
+// SLIM-mkb (werkgever)
+var t=document.getElementById('type'),k=document.getElementById('kosten'),s=document.getElementById('sub'),e=document.getElementById('eigen'),m=document.getElementById('msg');
 function calc(){var c=parseFloat(k.value)||0,raw=c*0.6,min,max,sub=raw,msg='';
 if(t.value==='sam'){min=125000;max=500000}else if(t.value==='agri'){min=5000;max=20000}else{min=5000;max=24999}
 if(raw>max){sub=max;msg='Je zit boven het maximum: de subsidie is afgetopt op '+f(max)+'. Kosten boven '+f(max/0.6)+' tellen niet meer mee.'}
 else if(raw<min&&c>0){sub=0;msg='Te weinig: de subsidie moet minimaal '+f(min)+' zijn, dus je project moet minstens '+f(min/0.6)+' kosten.'}
 else if(c>0){msg='Binnen de grenzen. Optimaal projectbudget voor het maximum: '+f(max/0.6)+'.'}
 s.textContent=f(sub);e.textContent=f(Math.max(c-sub,0));m.textContent=msg}
-t.addEventListener('change',calc);k.addEventListener('input',calc);calc()})();
+t.addEventListener('change',calc);k.addEventListener('input',calc);
+})();
 </script>
+
 <h2>Zo werkt de rekensom</h2>
+<p><strong>Werknemer — SLIM-scholingssubsidie:</strong></p>
+<ul>
+<li>90% van de opleidingskosten bij mbo-niveau 1 t/m 3, 40% bij mbo-niveau 4, hbo of hoger (dus ook bij de meeste data- en AI-opleidingen).</li>
+<li>Maximaal €25.000 per aanvraag, maximaal €100.000 per werkgever per jaar.</li>
+<li>De werkgever dient de aanvraag in en betaalt het resterende deel.</li>
+</ul>
+<p><strong>Werkgever — SLIM-mkb:</strong></p>
 <ul>
 <li>Subsidie = 60% van de subsidiabele kosten (externe adviseurs, directe loonkosten van eigen medewerkers plus een opslag voor overhead).</li>
 <li>Individueel mkb: minimaal €5.000, maximaal €24.999. Dat maximum haal je bij een projectbudget van ongeveer €41.665.</li>
@@ -72,13 +128,11 @@ t.addEventListener('change',calc);k.addEventListener('input',calc);calc()})();
 <li>Samenwerkingsverbanden: €125.000 – €500.000, met maximaal €200.000 per deelnemende partner.</li>
 <li>Activiteit D (praktijkleren derde leerweg): maximaal €2.700 per praktijkleerplaats.</li>
 </ul>
-<h2>Wat betekent dit voor je opleidingsbudget?</h2>
-<p>Met een project van ~€40.000 aan plan, advies en leermethode betaal je zelf ~€16.000 en krijg je €24.000 terug. Reken de subsidie dus als hefboom: elke euro eigen bijdrage wordt €2,50 aan investering in leren en ontwikkelen.</p>
 <p><a class="btn ghost" href="/aanvragen/">Bekijk het stappenplan →</a></p>
 
 <section class="cta"><h2>Subsidie binnen? Zet 'm in voor data- en AI-vaardigheden</h2>
 <p>De SLIM-regeling vergoedt geen losse cursussen, maar wél het opleidingsplan en de invoering van een leermethode in je bedrijf. Amsterdam Data Academy helpt mkb-werkgevers met een in-company traject dat daar naadloos op aansluit — NLQF-6 gecertificeerd.</p>
 <a class="btn" href="https://www.amsterdamdataacademy.com/in-company/?utm_source=slim-budget.nl&utm_medium=referral&utm_campaign=slim" rel="sponsored">Bekijk in-company mogelijkheden →</a></section>
 </main>
-<footer><div class="foot"><span>© 2026 slim-budget.nl</span><a href="/over/">Over deze site</a><a href="/faq/">FAQ</a><a href="https://www.uitvoeringvanbeleidszw.nl/subsidies-en-regelingen/algemene-informatie/slim-mkb-individuele-aanvragen--samenwerkingsverbanden-2025---2029" rel="noopener">Officiële bron (UVB)</a><span class="upd">Laatst bijgewerkt: 2026-09-17</span></div></footer>
+<footer><div class="foot"><span>© 2026 slim-budget.nl</span><a href="/over/">Over deze site</a><a href="/faq/">FAQ</a><a href="https://www.uitvoeringvanbeleidszw.nl/subsidies-en-regelingen/algemene-informatie/slim-mkb-individuele-aanvragen--samenwerkingsverbanden-2025---2029" rel="noopener">Officiële bron (UVB)</a><span class="upd">Laatst bijgewerkt: 2026-09-23</span></div></footer>
 </body></html>
